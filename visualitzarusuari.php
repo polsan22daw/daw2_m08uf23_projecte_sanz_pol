@@ -31,10 +31,11 @@ MOSTRANT DADES D'USUARIS DE LA BASE DE DADES LDAP
 <body>
 <h2>Formulari de selecció d'usuari</h2>
 <form action="http://zend-posabo.fjeclot.net/zendldap" method="GET">
-Unitat organitzativa: <input type="text" name="ou"><br>
-Usuari: <input type="text" name="usr"><br>
+Unitat organitzativa (ou): <input type="text" name="ou"><br>
+Usuari (uid): <input type="text" name="usr"><br>
 <input type="submit"/>
 <input type="reset"/>
 </form>
+<a href="http://zend-posabo.fjeclot.net/autent/menu.php">Tornar al menu</a>
 </body>
 </html>
