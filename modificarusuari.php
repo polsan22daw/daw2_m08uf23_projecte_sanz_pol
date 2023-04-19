@@ -11,6 +11,7 @@
 		$ou = $_POST['ou'];
 		$atribut = $_POST['atribut'];
 		$nou_contingut = $_POST['nouAtribut'];
+		$dn = 'uid='.$uid.',ou='.$ou.',dc=fjeclot,dc=net';
 		$opcions = [
 			'host' => 'zend-posabo.fjeclot.net',
 			'username' => 'cn=admin,dc=fjeclot,dc=net',
@@ -19,7 +20,7 @@
 			'accountDomainName' => 'fjeclot.net',
 			'baseDn' => 'dc=fjeclot,dc=net',		
 		];
-
+		
 		$ldap = new Ldap($opcions);
 		$ldap->bind();
 		$entrada = $ldap->getEntry($dn);
@@ -49,7 +50,7 @@
 		<label for="atributs">gidNumber</label><br>
 		<input type="radio" name="atribut" id="atributs" value="homeDirectory" />
 		<label for="atributs">Directori Personal</label><br>
-		<input type="radio" name="atribut" id="atributs" value="shell" />
+		<input type="radio" name="atribut" id="atributs" value="loginShell" />
 		<label for="atributs">LoginShell</label><br>
 		<input type="radio" name="atribut" id="atributs" value="cn" />
 		<label for="atributs">cn</label><br>
